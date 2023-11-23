@@ -2,7 +2,7 @@
  * 基础组件配置菜单
  * 后期可能会转换为JSON
  */
-const BASE_COMPONENTS = {
+export const BASE_COMPONENTS = {
   type: 0,
   alias: 'base_components',
   aliasCN: '基础型组件',
@@ -12,7 +12,7 @@ const BASE_COMPONENTS = {
   ]
 }
 
-const INPUT_TEXT_COMPONENTS = {
+export const INPUT_TEXT_COMPONENTS = {
   type: 1,
   alias: 'input_text_components',
   aliasCN: '输入型组件',
@@ -25,7 +25,7 @@ const INPUT_TEXT_COMPONENTS = {
   ]
 }
 
-const CHOOSE_COMPONENTS = {
+export const CHOOSE_COMPONENTS = {
   type: 2,
   alias: 'choose_components',
   aliasCN: '选择型控件',
@@ -36,7 +36,7 @@ const CHOOSE_COMPONENTS = {
   ]
 }
 
-const SERVICE_COMPONENTS = {
+export const SERVICE_COMPONENTS = {
   type: 3,
   aliasEN: 'service_components',
   aliasCN: '服务型控件',
@@ -45,22 +45,13 @@ const SERVICE_COMPONENTS = {
   ]
 }
 
-const LAYOUT_COMPONENTS = {
+export const LAYOUT_COMPONENTS = {
   type: 4,
   aliasEN: 'layout_components',
   aliasCN: '布局型控件',
   components: [
     { label: '行容器', component: 'row', id: '41' },
-    { label: '表哥容器', component: 'table', id: '42' },
+    { label: '表容器', component: 'table', id: '42' },
     { label: '边距', component: 'margin', id: '43' },
   ]
 }
-
-const MENU = [
-  BASE_COMPONENTS,
-  INPUT_TEXT_COMPONENTS,
-  SERVICE_COMPONENTS,
-  LAYOUT_COMPONENTS
-];
-
-export default MENU;
