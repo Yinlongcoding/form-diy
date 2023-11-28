@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import App from '../App.vue'
+import Home from '@/views/index/Home.vue'
 
 Vue.use(VueRouter)
 
@@ -8,14 +8,23 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: App
+    component: Home
+  },
+  {
+    path: '/parser',
+    name: 'parser',
+    component: () => import(/* webpackChunkName: "parser-example" */'@/components/parser/example/Index.vue')
+  },
+  {
+    path: '/tinymce',
+    name: 'tinymce',
+    component: () => import(/* webpackChunkName: "tinymce-example" */'@/components/tinymce/example/Index.vue')
   }
 ]
 
 const router = new VueRouter({
+  routes,
   mode: 'history',
-  base: process.env.BASE_URL,
-  routes
 })
 
 export default router
